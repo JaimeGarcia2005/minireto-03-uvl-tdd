@@ -69,7 +69,9 @@ def classify_model_size(feature_count: int) -> str:
         return "tiny"
     if feature_count <=15:
         return "small"
-    return "medium"
+    if feature_count <= 30:
+        return "medium"
+    return "large"
 
 
 def validate_catalog(
