@@ -87,7 +87,7 @@
 
 ---
 
-## Ciclo 4
+## Ciclo 5
 
 ### Red
 - Prueba añadida: Se ha añadido la prueba test_thirty_features_is_medium() y test_thirty_one_features_is_large().
