@@ -36,3 +36,27 @@
 
 ### Refactor
 - Mejora realizada, o motivo por el que no era necesaria: No hay nada que mejorar, por tanto, no se ha hecho.
+
+
+---
+
+## Ciclo 3
+
+### Red
+- Prueba añadida: Se ha añadido la prueba test_five_features_is_tiny() y test_six_features_is_small().
+- Técnica de diseño de pruebas empleada: Valor límite de las particiones equivalentes
+- Motivo de elegir este caso: Con esto observamos el final de la partición tiny, y el principio de la partición small.
+- Fallo observado: Ambas dan fallos al no tener contemplado el código estos casos.
+
+### Green
+- Código mínimo escrito: def classify_model_size(feature_count: int) -> str:
+    if feature_count <= 5:
+        return "tiny"
+    return "small"
+
+    (Mantenemos el if del caso < 1)
+
+- Resultado de las pruebas: Una vez añadido el código, pasa correctamente
+
+### Refactor
+- Mejora realizada, o motivo por el que no era necesaria: No hay nada que mejorar, por tanto, no se ha hecho.
