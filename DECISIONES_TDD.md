@@ -69,7 +69,7 @@
 - Prueba añadida: Se ha añadido la prueba test_fifteen_features_is_small() y test_sixteen_features_is_medium().
 - Técnica de diseño de pruebas empleada: Valor límite de las particiones equivalentes
 - Motivo de elegir este caso: Con esto observamos el final de la partición tiny, y el principio de la partición small.
-- Fallo observado: Ambas dan fallos al no tener contemplado el código estos casos.
+- Fallo observado: test_sixteen_features_is_medium() da fallo al no tener contemplado el código este caso. El otro pasa correctamente.
 
 ### Green
 - Código mínimo escrito: def classify_model_size(feature_count: int) -> str:
@@ -83,3 +83,27 @@
 
 ### Refactor
 - Mejora realizada, o motivo por el que no era necesaria: No hay nada que mejorar, por tanto, no se ha hecho.
+
+
+---
+
+## Ciclo 4
+
+### Red
+- Prueba añadida: Se ha añadido la prueba test_thirty_features_is_medium() y test_thirty_one_features_is_large().
+- Técnica de diseño de pruebas empleada: Valor límite de las particiones equivalentes
+- Motivo de elegir este caso: Con esto observamos el final de la partición medium, y el principio de la partición large.
+- Fallo observado: test_thirty_one_features_is_large() da fallo al no tener contemplado el código este caso. El otro pasa correctamente.
+
+### Green
+- Código mínimo escrito: def classify_model_size(feature_count: int) -> str:
+    if feature_count <= 30:
+        return "medium"
+    return "large"
+
+    (Mantenemos el if del caso < 1, del caso <=5 y del caso <=15>)
+
+- Resultado de las pruebas: Una vez añadido el código, pasa correctamente
+
+### Refactor
+- Mejora realizada, o motivo por el que no era necesaria: En los test había mucho código duplicado. Para evitar esto se usará pytest.mark.parametrize, para con una única función de test, probar todos los casos.
