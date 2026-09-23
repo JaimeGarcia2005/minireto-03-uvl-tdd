@@ -15,3 +15,9 @@ def test_five_features_is_tiny():
 
 def test_six_features_is_small():
     assert classify_model_size(6) == "small"
+    
+def test_fifteen_features_is_small():
+    assert classify_model_size(15) == "small"
+
+def test_sixteen_features_is_medium():
+    assert classify_model_size(16) == "medium"

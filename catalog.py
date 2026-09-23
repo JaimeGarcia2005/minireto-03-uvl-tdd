@@ -67,7 +67,9 @@ def classify_model_size(feature_count: int) -> str:
         raise ValueError("feature_count debe ser positivo")
     if feature_count <= 5:
         return "tiny"
-    return "small"
+    if feature_count <=15:
+        return "small"
+    return "medium"
 
 
 def validate_catalog(
