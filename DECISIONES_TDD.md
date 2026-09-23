@@ -19,4 +19,20 @@
 
 ---
 
-Copiad este bloque para cada ciclo.
+## Ciclo 2
+
+### Red
+- Prueba añadida: Se ha añadido la prueba test_zero_fetures_is_invalid().
+- Técnica de diseño de pruebas empleada: Valor límite
+- Motivo de elegir este caso: Rechazar los que tengan el valor 0, es decir, no válidos.
+- Fallo observado: No estaba implementado el ValueError de la prueba.
+
+### Green
+- Código mínimo escrito: def classify_model_size(feature_count: int) -> str:
+    if feature_count < 1:
+        raise ValueError("feature_count debe ser positivo")
+
+- Resultado de las pruebas: Una vez añadido el código, pasa correctamente
+
+### Refactor
+- Mejora realizada, o motivo por el que no era necesaria: No hay nada que mejorar, por tanto, no se ha hecho.
